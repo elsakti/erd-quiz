@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD Quiz - Entity Relationship Diagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="quiz-header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="english">ERD Quiz Challenge</span>
+                    <span class="thai">แบบทดสอบ ERD</span>
+                </h1>
+                <p class="subtitle">
+                    <span class="english">Entity Relationship Diagram Knowledge Test</span>
+                    <span class="thai">การทดสอบความรู้เรื่องแผนภาพความสัมพันธ์ของเอนทิตี</span>
+                </p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">Question 1 of 30</span>
+            </div>
+        </header>
+
+        <main class="quiz-content">
+            <div class="question-card" id="questionCard">
+                <div class="question-header">
+                    <span class="question-number" id="questionNumber">Question 1</span>
+                    <span class="question-type" id="questionType">Multiple Choice</span>
+                </div>
+                
+                <div class="question-text" id="questionText">
+                    <!-- Question will be loaded here -->
+                </div>
+                
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be loaded here -->
+                </div>
+                
+                <div class="explanation-container" id="explanationContainer" style="display: none;">
+                    <div class="explanation-header">
+                        <span class="english">Explanation</span>
+                        <span class="thai">คำอธิบาย</span>
+                    </div>
+                    <div class="explanation-text" id="explanationText">
+                        <!-- Explanation will be shown here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>
+                    <span class="english">Previous</span>
+                    <span class="thai">ก่อนหน้า</span>
+                </button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>
+                    <span class="english">Next Question</span>
+                    <span class="thai">คำถามต่อไป</span>
+                </button>
+                <button class="btn btn-success" id="finishBtn" onclick="finishQuiz()" style="display: none;">
+                    <span class="english">Finish Quiz</span>
+                    <span class="thai">จบแบบทดสอบ</span>
+                </button>
+            </div>
+        </main>
+
+        <div class="completion-screen" id="completionScreen" style="display: none;">
+            <div class="completion-content">
+                <div class="completion-icon">🎉</div>
+                <h2 class="completion-title">
+                    <span class="english">Quiz Completed!</span>
+                    <span class="thai">เสร็จสิ้นแบบทดสอบแล้ว!</span>
+                </h2>
+                <p class="completion-message">
+                    <span class="english">Great job! You've completed all 30 ERD questions.</span>
+                    <span class="thai">เยี่ยมมาก! คุณได้ทำคำถาม ERD ครบทั้ง 30 ข้อแล้ว</span>
+                </p>
+                <button class="btn btn-primary" onclick="restartQuiz()">
+                    <span class="english">Start Again</span>
+                    <span class="thai">เริ่มใหม่</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
